@@ -1,7 +1,7 @@
 package com.mscourse.hrpayroll.resources;
 
 import com.mscourse.hrpayroll.entities.Payment;
-import com.mscourse.hrpayroll.servicies.PaymentService;
+import com.mscourse.hrpayroll.services.PaymentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
