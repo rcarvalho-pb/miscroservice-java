@@ -16,9 +16,11 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PaymentService {
 
-    @Value("${hr-worker.host}")
-    private String workerHost;
     private final WorkerFeignClient client;
+
+//    public PaymentService(WorkerFeignClient client){
+//        this.client = client;
+//    }
     public Payment getPayment(long workerId, int days){
         Worker worker = client.findById(workerId).getBody().get();
 

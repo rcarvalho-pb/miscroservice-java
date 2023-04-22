@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@FeignClient(name = "hr-worker", url = "${hr-worker.host}", path = "/workers")
+@FeignClient(name = "hr-worker", path = "/workers")
 @Component
 public interface WorkerFeignClient {
 
