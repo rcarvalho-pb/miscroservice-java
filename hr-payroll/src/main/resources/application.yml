@@ -5,4 +5,8 @@ spring:
   application:
     name: hr-payroll
 
+hr-worker:
+  loadBalance:
+    listOfServers: [localhost:8001, localhost:8002]
+
 hr-worker.host: http://localhost:8001
