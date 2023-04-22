@@ -16,7 +16,10 @@ public class PaymentResource {
     private final PaymentService service;
 
     @GetMapping("/{workerId}/days/{days}")
-    public ResponseEntity<Payment> getPayment(@PathVariable long workerId, @PathVariable Integer days){
+    public ResponseEntity<Payment> getPayment(@PathVariable long workerId, @PathVariable Integer days) throws InterruptedException {
+
+        Thread.sleep(3000);
+
         return ResponseEntity.ok(service.getPayment(workerId, days));
     }
 

@@ -21,5 +21,6 @@ public interface WorkerFeignClient {
     @GetMapping
     ResponseEntity<List<Worker>> findAll();
     @GetMapping(value = "/{id}")
+
     ResponseEntity<Optional<Worker>> findById(@PathVariable("id") Long id);
 }
